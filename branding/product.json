@@ -1,0 +1,13 @@
+{
+    "copyright":  "KeepCode",
+    "applicationName":  "keepcode",
+    "nameShort":  "KeepCode",
+    "nameLong":  "KeepCode IDE",
+    "win32AppUserModelId":  "KeepCode.KeepCode",
+    "dataFolderName":  ".keepcode",
+    "extensionsGallery":  {
+                              "resourceUrlTemplate":  "https://open-vsx.org/vscode/unpkg/{publisher}/{name}/{version}/{path}",
+                              "itemUrl":  "https://open-vsx.org/vscode/item",
+                              "serviceUrl":  "https://open-vsx.org/vscode/gallery"
+                          }
+}
