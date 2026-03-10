@@ -1,0 +1,22 @@
+{
+    "contributes":  {
+                        "commands":  [
+                                         {
+                                             "command":  "keepcode.chat",
+                                             "title":  "KeepCode: Open AI Chat"
+                                         }
+                                     ]
+                    },
+    "publisher":  "keepcode",
+    "displayName":  "KeepCode AI Core",
+    "name":  "keepcode-ai",
+    "version":  "0.0.1",
+    "engines":  {
+                    "vscode":  "^1.90.0"
+                },
+    "categories":  [
+                       "AI",
+                       "Programming Languages"
+                   ],
+    "main":  "./dist/extension.js"
+}
