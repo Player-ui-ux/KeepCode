@@ -1,0 +1,22 @@
+name: Build KeepCode
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build KeepCode
+        run: |
+          echo "KeepCode Cloud Build Started"
+          # Gelecekte buraya build komutlarÄ± eklenecek
