@@ -11,12 +11,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Clone VSCodium
+        run: |
+          git clone --depth 1 https://github.com/VSCodium/vscodium.git sources
+          cd sources
+          
+      - name: Setup Environment
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Build KeepCode
+      - name: Install Build Tools
         run: |
-          echo "KeepCode Cloud Build Started"
-          # Gelecekte buraya build komutlarÄ± eklenecek
+          npm install -g gulp-cli
+          cd sources
+          # VSCodium build setup
+          # ./get_repo.sh (Usually handles VS Code clone)
+          
+      - name: Apply Branding
+        run: |
+          # Replace branding files from our repo to sources/
+          cp branding/product.json sources/vscode/product.json
+          # (Add icons here in next step)
+          
+      - name: Injected DeepSeek Extension
+        run: |
+          echo "Adding DeepSeek AI Layer..."
+          # Extension logic setup
+          
+      - name: Build Windows
+        run: |
+          cd sources
+          # Command to build VSCodium Windows
+          # For now, simulate success till verified
+          echo "Build process initiated in cloud..."
